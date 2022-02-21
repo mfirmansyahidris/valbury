@@ -1,0 +1,18 @@
+{
+  "cancel": "Cancel",
+  "yes": "Yes",
+  "no": "No",
+  "close": "Close",
+  "pleaseWait": "Please Wait",
+
+  "loginAndRegistration": "Login & Registration",
+  "phoneNumber": "Phone Number",
+  "email": "Email",
+  "submit": "Submit",
+  "invalidEmail": "Invalid Email",
+  "invalidPhone": "Invalid Phone",
+  "loginSuccess": "Login Success",
+
+  "createdBy": "Created by",
+  "creator": "M. Firmansyah Idris"
+}
