@@ -29,7 +29,11 @@ class _SplashPageState extends State<SplashPage> {
       _showCredit = true;
     });
     return Timer(duration, () async {
-      context.goToReplace(AppRoute.loginPage);
+      if(sl<PrefManager>().email.isNullOrEmpty()){
+        context.goToReplace(AppRoute.loginPage);
+      }else{
+        context.goToReplace(AppRoute.mainPage);
+      }
     });
   }
 

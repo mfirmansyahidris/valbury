@@ -26,6 +26,11 @@ class Strings {
   String invalidPhone = "invalidPhone".toLocale();
   String loginSuccess = "loginSuccess".toLocale();
 
+  String home = "home".toLocale();
+  String hospital = "hospital".toLocale();
+  String clinic = "clinic".toLocale();
+  String profile = "profile".toLocale();
+
   String createdBy = "createdBy".toLocale();
   String creator = "creator".toLocale();
 

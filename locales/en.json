@@ -13,6 +13,11 @@
   "invalidPhone": "Invalid Phone",
   "loginSuccess": "Login Success",
 
+  "home": "Home",
+  "hospital": "Hospital",
+  "clinic": "Clinic",
+  "profile": "Profile",
+
   "createdBy": "Created by",
   "creator": "M. Firmansyah Idris"
 }
