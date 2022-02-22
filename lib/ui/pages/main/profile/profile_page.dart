@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:the_klink_sehat/config/config.dart';
 import 'package:the_klink_sehat/ui/ui.dart';
+import 'package:the_klink_sehat/utils/utils.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final VoidCallback? onBack;
+  const ProfilePage({Key? key, this.onBack}) : super(key: key);
 
   @override
   _ProfilePageState createState() => _ProfilePageState();
@@ -11,11 +14,77 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Profile",
-        style: TextStyles.h4,
+    return WillPopScope(
+      onWillPop: () async {
+        widget.onBack?.call();
+        return false;
+      },
+      child: Parent(
+        appBar: context.appBar(
+          title: Strings.get.profile,
+          isPrimary: true,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: (){
+              widget.onBack?.call();
+            },
+          )
+        ),
+        child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          padding: EdgeInsets.all(Dimens.space20),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Palette.white,
+              borderRadius: BorderRadius.circular(Dimens.cornerRadius),
+              boxShadow: [BoxShadows.card]
+            ),
+            padding: EdgeInsets.all(Dimens.space20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _itemProfile(label: Strings.get.email, value: sl<PrefManager>().email),
+                SpacerV(value: Dimens.space20,),
+                _itemProfile(label: Strings.get.phoneNumber, value: sl<PrefManager>().phone),
+                Divider(height: Dimens.space24,),
+                Center(
+                  child: Button(
+                    title: Strings.get.logout,
+                    verticalMargin: 0,
+                    onPressed: (){
+                      context.dialogConfirm(
+                        title: Strings.get.logout,
+                        message: Strings.get.confirmLogout,
+                        onActionYes: (){
+                          context.goToClearStack(AppRoute.loginPage);
+                          sl<PrefManager>().clear();
+                        }
+                      );
+                    },
+                    showShadow: false,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
+    );
+  }
+  
+  Widget _itemProfile({required String label, required String value}){
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyles.body2.copyWith(color: Palette.primary),
+        ),
+        Text(
+          value,
+          style: TextStyles.h4,
+        ),
+      ],
     );
   }
 }

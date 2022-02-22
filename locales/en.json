@@ -12,6 +12,8 @@
   "invalidEmail": "Invalid Email",
   "invalidPhone": "Invalid Phone",
   "loginSuccess": "Login Success",
+  "logout": "Logout",
+  "confirmLogout": "Are you sure want to logout?",
 
   "home": "Home",
   "hospital": "Hospital",

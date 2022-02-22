@@ -25,6 +25,8 @@ class Strings {
   String invalidEmail = "invalidEmail".toLocale();
   String invalidPhone = "invalidPhone".toLocale();
   String loginSuccess = "loginSuccess".toLocale();
+  String logout = "logout".toLocale();
+  String confirmLogout = "confirmLogout".toLocale();
 
   String home = "home".toLocale();
   String hospital = "hospital".toLocale();

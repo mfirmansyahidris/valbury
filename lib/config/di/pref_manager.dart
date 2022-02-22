@@ -26,4 +26,8 @@ class PrefManager {
   set phone(String? value) => preferences.setString(_kPhone, value ?? "");
 
   String get phone => preferences.getString(_kPhone) ?? "";
+
+  void clear(){
+    preferences.clear();
+  }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:the_klink_sehat/config/config.dart';
 import 'package:the_klink_sehat/ui/ui.dart';
 import 'package:the_klink_sehat/utils/utils.dart';
 
@@ -13,12 +12,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _pageIndex = 0;
-  final List<_Page> _pages = [
-    _Page(page: const HomePage(), sourceIcon: Images.homeSvg, label: Strings.get.home),
-    _Page(page: const HospitalPage(), sourceIcon: Images.hospitalSvg, label: Strings.get.hospital),
-    _Page(page: const ClinicPage(), sourceIcon: Images.clinicSvg, label: Strings.get.clinic),
-    _Page(page: const ProfilePage(), sourceIcon: Images.profileSvg, label: Strings.get.profile),
-  ];
+  final List<_Page> _pages = [];
 
   final _pageController = PageController();
 
@@ -26,6 +20,41 @@ class _MainPageState extends State<MainPage> {
     _pageController.animateToPage(index,
         duration: durationDefault,
         curve: Curves.easeIn);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pages.addAll([
+      _Page(
+        page: HomePage(
+          switchToPage: (page) => _switchPage(page),
+        ),
+        sourceIcon: Images.homeSvg,
+        label: Strings.get.home
+      ),
+      _Page(
+        page: ClinicPage(
+          navigateToPage: () => _switchPage(0),
+        ),
+        sourceIcon: Images.hospitalSvg,
+        label: Strings.get.hospital
+      ),
+      _Page(
+        page: ClinicPage(
+          navigateToPage: () => _switchPage(0),
+        ),
+        sourceIcon: Images.clinicSvg,
+        label: Strings.get.clinic
+      ),
+      _Page(
+        page: ProfilePage(
+          onBack: () => _switchPage(0),
+        ),
+        sourceIcon: Images.profileSvg,
+        label: Strings.get.profile
+      ),
+    ]);
   }
 
   @override

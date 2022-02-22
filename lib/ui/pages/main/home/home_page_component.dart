@@ -4,7 +4,8 @@ import 'package:the_klink_sehat/ui/ui.dart';
 import 'package:the_klink_sehat/utils/utils.dart';
 
 class HomePageComponent extends StatefulWidget {
-  const HomePageComponent({Key? key}) : super(key: key);
+  final Function(int)? switchToPage;
+  const HomePageComponent({Key? key, this.switchToPage}) : super(key: key);
 
   @override
   _HomePageComponentState createState() => _HomePageComponentState();
@@ -84,9 +85,14 @@ class _HomePageComponentState extends State<HomePageComponent> {
                 SpacerH(
                   value: Dimens.space16,
                 ),
-                Text(
-                  Strings.get.seeAll,
-                  style: TextStyles.body1.copyWith(color: Palette.primary),
+                InkWell(
+                  onTap: (){
+                    widget.switchToPage?.call(1);
+                  },
+                  child: Text(
+                    Strings.get.seeAll,
+                    style: TextStyles.body1.copyWith(color: Palette.primary),
+                  ),
                 )
               ],
             ),
@@ -161,9 +167,14 @@ class _HomePageComponentState extends State<HomePageComponent> {
                 SpacerH(
                   value: Dimens.space16,
                 ),
-                Text(
-                  Strings.get.seeAll,
-                  style: TextStyles.body1.copyWith(color: Palette.primary),
+                InkWell(
+                  onTap: (){
+                    widget.switchToPage?.call(2);
+                  },
+                  child: Text(
+                    Strings.get.seeAll,
+                    style: TextStyles.body1.copyWith(color: Palette.primary),
+                  ),
                 )
               ],
             ),

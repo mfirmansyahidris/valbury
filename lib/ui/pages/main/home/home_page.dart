@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:the_klink_sehat/ui/ui.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final Function(int)? switchToPage;
+  const HomePage({Key? key, this.switchToPage}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -45,10 +46,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         backgroundColor: Palette.background,
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            HomePageComponent(),
-            HistoryPageComponent(),
+            HomePageComponent(switchToPage: widget.switchToPage,),
+            const HistoryPageComponent(),
           ],
         ),
       ),
