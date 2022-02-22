@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
-import 'package:the_klink_sehat/utils/utils.dart';
+import 'package:valbury/ui/ui.dart';
+import 'package:valbury/utils/utils.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);

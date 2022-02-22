@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:the_klink_sehat/core/core.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
-import 'package:the_klink_sehat/utils/utils.dart';
+import 'package:valbury/core/core.dart';
+import 'package:valbury/ui/ui.dart';
+import 'package:valbury/utils/utils.dart';
 
 class HospitalPage extends StatefulWidget {
   final VoidCallback? onBack;

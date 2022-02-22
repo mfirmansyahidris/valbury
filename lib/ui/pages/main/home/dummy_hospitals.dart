@@ -1,4 +1,4 @@
-import 'package:the_klink_sehat/core/core.dart';
+import 'package:valbury/core/core.dart';
 
 final dummyHospitals = [
   DataHelper(

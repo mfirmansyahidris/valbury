@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:the_klink_sehat/config/config.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
-import 'package:the_klink_sehat/utils/utils.dart';
+import 'package:valbury/config/config.dart';
+import 'package:valbury/ui/ui.dart';
+import 'package:valbury/utils/utils.dart';
 
 class ProfilePage extends StatefulWidget {
   final VoidCallback? onBack;

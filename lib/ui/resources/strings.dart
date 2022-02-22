@@ -1,4 +1,4 @@
-import 'package:the_klink_sehat/utils/utils.dart';
+import 'package:valbury/utils/utils.dart';
 
 class Strings {
   Strings._();
@@ -10,7 +10,7 @@ class Strings {
     get = Strings._();
   }
 
-  String appName = "The Klinik Sehat";
+  String appName = "Valbury";
   String cancel = "cancel".toLocale();
   String yes = "yes".toLocale();
   String save = "save".toLocale();

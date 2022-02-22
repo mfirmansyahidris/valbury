@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
+import 'package:valbury/ui/ui.dart';
 
 extension ContextExtensions on BuildContext {
   bool isMobile() {

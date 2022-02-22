@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
+import 'package:valbury/ui/ui.dart';
 
 class TextF extends StatefulWidget {
   const TextF(

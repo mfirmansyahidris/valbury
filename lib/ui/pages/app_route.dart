@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:the_klink_sehat/ui/pages/login/login_page.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
+import 'package:valbury/ui/pages/login/login_page.dart';
+import 'package:valbury/ui/ui.dart';
 
 class AppRoute {
   AppRoute._();

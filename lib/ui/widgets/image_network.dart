@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_klink_sehat/ui/ui.dart';
-import 'package:the_klink_sehat/utils/utils.dart';
+import 'package:valbury/ui/ui.dart';
+import 'package:valbury/utils/utils.dart';
 
 class ImageNetwork extends StatelessWidget {
   final String imageUrl;

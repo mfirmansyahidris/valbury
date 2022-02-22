@@ -1,4 +1,4 @@
-package com.fi.the_klink_sehat
+package com.fi.valbury
 
 import io.flutter.embedding.android.FlutterActivity
 
