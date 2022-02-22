@@ -17,6 +17,12 @@
   "hospital": "Hospital",
   "clinic": "Clinic",
   "profile": "Profile",
+  "history": "History",
+
+  "viewDetail": "View Detail",
+  "seeAll": "See All",
+
+  "label": "Label",
 
   "createdBy": "Created by",
   "creator": "M. Firmansyah Idris"

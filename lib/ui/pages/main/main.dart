@@ -1,4 +1,4 @@
-export 'home/home_page.dart';
+export 'home/home.dart';
 export 'clinic/clinic_page.dart';
 export 'main_page.dart';
 export 'profile/profile_page.dart';

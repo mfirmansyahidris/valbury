@@ -43,6 +43,8 @@ extension ContextExtensions on BuildContext {
     bool isPrimary = false,
     bool isTransparent = false,
     List<Widget>? actions,
+    Widget? leading,
+    PreferredSizeWidget? bottom,
   }) =>
       PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
@@ -53,11 +55,13 @@ extension ContextExtensions on BuildContext {
               ? Palette.primary
               : Palette.background,
           elevation: 0.0,
+          leading: leading,
+          bottom: bottom,
           centerTitle: true,
           title: Text(
             title ?? "",
             style: TextStyles.h6.copyWith(
-              color: Palette.primary,
+              color: isPrimary ? Palette.white : Palette.primary,
               fontWeight: FontWeight.w600,
             ),
           ),

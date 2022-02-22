@@ -30,6 +30,10 @@ class Strings {
   String hospital = "hospital".toLocale();
   String clinic = "clinic".toLocale();
   String profile = "profile".toLocale();
+  String history = "history".toLocale();
+
+  String viewDetail = "viewDetail".toLocale();
+  String seeAll = "seeAll".toLocale();
 
   String createdBy = "createdBy".toLocale();
   String creator = "creator".toLocale();
